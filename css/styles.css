@@ -1,0 +1,191 @@
+/* Imports Google Font: "Figtree" */
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* Variables */
+:root {
+  /* Colors */
+  --cc-netural-100: hsl(0, 0%, 100%);
+  --cc-netural-200: hsl(0, 0%, 35%);
+  --cc-netural-900: hsl(0, 0%, 7%);
+
+  --c-primary-400: hsl(47, 88%, 63%);
+
+  --c-accent-400: hsl(348, 100%, 36%);
+
+  /* Font Weight */
+  --fw-regular: 500;
+  --fw-bold: 800;
+}
+
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+}
+
+body,
+main,
+section,
+div,
+h1,
+h2,
+h3,
+a,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Mobile Viewport */
+
+/* Style Rules for Body Element */
+body {
+  background-color: var(--c-primary-400);
+  font-family: "Figtree", sans-serif;
+  font-weight: var(--fw-regular);
+  margin: 1.4375em;
+}
+
+/* Style Rules for Blog Card Component */
+.blog-card {
+  background-color: var(--cc-netural-100);
+  border: 1.5px solid var(--cc-netural-900);
+  border-radius: 20px;
+  box-shadow: 8px 8px 0px 0px var(--cc-netural-900);
+  -webkit-box-shadow: 8px 8px 0px 0px var(--cc-netural-900);
+  -moz-box-shadow: 8px 8px 0px 0px var(--cc-netural-900);
+  margin: 0 auto;
+  max-width: 20.438rem;
+  min-width: 16rem;
+  padding: 1.5rem;
+}
+
+.blog-card__img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.blog-card a {
+  text-decoration: none;
+}
+
+.blog-card__category {
+  background-color: var(--c-primary-400);
+  border-radius: 4px;
+  color: var(--cc-netural-900);
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+  margin-top: 1.5rem;
+  padding: 0.375rem 0.75rem;
+  transition: all 0.6s linear;
+}
+
+.blog-card h3 {
+  color: var(--cc-netural-900);
+  font-size: 0.75rem;
+  font-weight: var(--fw-regular);
+}
+
+.blog-card h1 a {
+  color: var(--cc-netural-900);
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+  transition: color 0.6s linear;
+}
+
+.blog-card h1,
+.blog-card h3 {
+  margin-block: 0.75rem;
+}
+
+.blog-card p {
+  color: var(--cc-netural-200);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.blog-card__author {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.blog-card__author img {
+  display: block;
+  height: 12%;
+  width: 12%;
+}
+
+.blog-card__author h2 {
+  font-size: 0.875rem;
+  font-weight: var(--fw-bold);
+}
+
+/* Styles Rules for Footer Area */
+
+.attribution {
+  color: var(--c-primary-700);
+  font-size: 0.875em;
+  padding: 1.5em;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.external-link {
+  border-bottom: 3px solid var(--c-accent-400);
+  text-decoration: none;
+  color: var(--c-primary-700);
+  transition: border-bottom 0.2s linear;
+}
+
+/* Media Query for Desktop Viewports */
+@media screen and (min-width: 810px), print {
+
+  /* Desktop Viewports: Style Rules for Blog Card Component */
+  .blog-card {
+    font-size: 1rem;
+    max-width: 24rem;
+    transition: box-shadow 0.4s linear;
+  }
+
+  .blog-card:hover {
+    box-shadow: 16px 16px 0px 0px var(--cc-netural-900);
+    -webkit-box-shadow: 16px 16px 0px 0px var(--cc-netural-900);
+    -moz-box-shadow: 16px 16px 0px 0px var(--cc-netural-900);
+  }
+
+  .blog-card__category {
+    font-size: 0.875rem;
+  }
+
+  .blog-card__category:hover {
+    background-color: var(--cc-netural-900);
+    color: var(--cc-netural-100);
+  }
+
+  .blog-card h3 {
+    font-size: 0.875rem;
+  }
+
+  .blog-card h1 a {
+    font-size: 1.5rem;
+  }
+
+  .blog-card h1 > a:hover {
+    color: var(--c-primary-400);
+  }
+
+  .blog-card p {
+    font-size: 1rem;
+  }
+
+  /* Desktop Viewports: Style Rules for Footer Area */
+  .external-link:hover {
+    border-bottom: 5px solid var(--c-accent-400);
+  }
+
+}
